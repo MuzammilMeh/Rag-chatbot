@@ -11,16 +11,13 @@ from llama_index import (
     VectorStoreIndex,
     ServiceContext,
     StorageContext,
-    load_index_from_storage,
 )
 from llama_index.llms import OpenAI
 from llama_index.storage.docstore import SimpleDocumentStore
 from llama_index.storage.index_store import SimpleIndexStore
 from llama_index.vector_stores import SimpleVectorStore, ChromaVectorStore
 from llama_index.node_parser import SimpleNodeParser
-from langchain.vectorstores import FAISS
-from llama_index.vector_stores.faiss import FaissVectorStore
-import faiss
+
 import openai
 import chromadb
 
@@ -141,7 +138,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.session_state.messages.append(message)  # Add response to message history
 
 
-if st.button("Clear All"):
-    # Clear values from *all* all in-memory and on-disk data caches:
-    # i.e. clear values from both square and cube
-    st.cache_data.clear()
+# if st.button("Clear All"):
+#     # Clear values from *all* all in-memory and on-disk data caches:
+#     # i.e. clear values from both square and cube
+#     st.cache_data.clear()
