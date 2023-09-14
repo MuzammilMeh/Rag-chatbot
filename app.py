@@ -11,7 +11,6 @@ from llama_index import (
     ServiceContext,
     StorageContext,
 )
-from llama_index.llms import OpenAI
 from llama_index.vector_stores import ChromaVectorStore
 
 import chromadb
