@@ -1,5 +1,4 @@
 import os
-import openai
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from langchain.embeddings import HuggingFaceEmbeddings
 from llama_index import ServiceContext
@@ -13,10 +12,7 @@ from llama_index import (
     StorageContext,
 )
 from llama_index.llms import OpenAI
-from llama_index.storage.docstore import SimpleDocumentStore
-from llama_index.storage.index_store import SimpleIndexStore
-from llama_index.vector_stores import SimpleVectorStore, ChromaVectorStore
-from llama_index.node_parser import SimpleNodeParser
+from llama_index.vector_stores import ChromaVectorStore
 
 import chromadb
 
@@ -24,8 +20,8 @@ import chromadb
 if st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
-DB_FAISS_PATH = "vectorstore/db_faiss"
+# openai.api_key = os.environ["OPENAI_API_KEY"]
+# DB_FAISS_PATH = "vectorstore/db_faiss"
 
 
 st.header("Chat with the GE 💬 📚")
