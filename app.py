@@ -18,13 +18,11 @@ from llama_index.storage.index_store import SimpleIndexStore
 from llama_index.vector_stores import SimpleVectorStore, ChromaVectorStore
 from llama_index.node_parser import SimpleNodeParser
 
-import openai
 import chromadb
 
 
-
 if st.secrets:
-    os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 openai.api_key = os.environ["OPENAI_API_KEY"]
 DB_FAISS_PATH = "vectorstore/db_faiss"
