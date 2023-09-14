@@ -1,9 +1,10 @@
 streamlit
 openai
-llama-index
+llama-index==0.8.10
 nltk
 sentence_transformers
 langchain
 pypdf
 chromadb
-openai
+llama-hub
+
