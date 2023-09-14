@@ -21,7 +21,11 @@ from llama_index.node_parser import SimpleNodeParser
 import openai
 import chromadb
 
-os.environ["OPENAI_API_KEY"] = "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"
+
+
+if st.secrets:
+    os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+
 openai.api_key = os.environ["OPENAI_API_KEY"]
 DB_FAISS_PATH = "vectorstore/db_faiss"
 
