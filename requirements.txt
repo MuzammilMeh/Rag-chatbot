@@ -7,4 +7,5 @@ langchain
 pypdf
 chromadb==0.3.29
 llama-hub
+pysqlite3-binary
 
