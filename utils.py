@@ -85,7 +85,7 @@ def get_store_data():
 
 
 def query_data(prompt):
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = "openai-key"
     openai.api_key = os.environ["OPENAI_API_KEY"]
     folder_path = "chroma_db"
     index = get_store_data() if os.path.exists(folder_path) else get_data(folder_path)
